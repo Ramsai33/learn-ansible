@@ -7,3 +7,14 @@
     - name: access variable at play level
       ansible.builtin.debug:
         msg: URL == {{URL}}
+
+
+- name: declaring variable at task level
+  hosts: all
+  connection: local
+  tasks:
+    - name: access variable at task level
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
+      vars:
+          URL: task.example.com
