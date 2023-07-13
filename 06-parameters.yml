@@ -1,0 +1,6 @@
+- name: Parameter access
+  hosts: all
+  connection: local
+  tasks:
+    - debug:
+        msg: "{{ lookup('aws_ssm", 'test', region='us-east-1') }}"
