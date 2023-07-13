@@ -1,5 +1,5 @@
 - name: Parameter access
-  hosts: all
+  hosts: localhost
   connection: local
   tasks:
     - debug:
